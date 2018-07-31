@@ -1,0 +1,22 @@
+<h2 md-dialog-title>{{title}}</h2>
+<div>
+	<div class="agree-container">
+		<b>Agree</b>
+		<button md-icon-button color="primary" (click)="vote('agree')">
+			<i class="material-icons">thumb_up</i>
+		</button>
+		{{node.votes.agrees}}
+	</div>
+	<div class="disagree-container">
+		Disgree
+		<button md-icon-button color="warn" (click)="vote('disagree')">
+			<i class="material-icons">thumb_down</i>
+		</button>
+		{{node.votes.disagrees}}
+	</div>
+
+
+	<textarea md-maxlength="150" rows="5"  md-select-on-focus class="desc-text" readonly="readonly">{{(node.nodeData.g == 'g5') ? node.nodeData.text : node.group.description}}</textarea>
+<div>
+<!-- <button md-button class="agree" (click)="closeDialog()">Agree</button>
+<button md-button class="disagree" (click)="closeDialog()">Disgree</button> -->

@@ -1,0 +1,23 @@
+<md-toolbar class="md-elevation-z3">
+  <span class="logo-span" ><i class="material-icons user logo">stars</i><span class="title">{{title}}</span></span>
+
+  <span class="menu-span" style="float:right;" >
+    <i class="material-icons user" [mdMenuTriggerFor]="menu">account_circle</i>
+    <i class="material-icons user">help_outline</i>
+  </span>
+</md-toolbar>
+
+<md-menu #menu="mdMenu">
+  <button md-menu-item>
+    <md-icon>dialpad</md-icon>
+    Settings
+  </button>
+  <button md-menu-item>
+    <md-icon>notifications_off</md-icon>
+    <span>Exit</span>
+  </button>
+</md-menu>
+
+<div class="container">
+  <router-outlet></router-outlet>
+</div>

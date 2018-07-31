@@ -1,0 +1,55 @@
+
+<md-toolbar color="primary" class="title-bar">
+  <span class="md-menu"><md-icon>dehaze</md-icon></span>
+  <div class="search" >
+    <md-icon class="search-icon" mdTooltip="Search" mdTooltipPosition="below">search</md-icon>
+    <input type="text" class="search-text" placeholder="Search" [(ngModel)]="query.search" (ngModelChange)='onQuerySearchTextChanged($event)' name='search' #search >
+    <span [hidden]="this.query.search == ''"><md-icon class="clear-search" (click)="clearSearch()" mdTooltip="Clear search" mdTooltipPosition="below">clear</md-icon></span>
+  </div>
+  <md-select placeholder="Views" name="views"  class="status-view" style="float:right" [(ngModel)]="query.views" (change)="onQueryChanges()">
+    <md-option *ngFor="let status of filterViewsOptions" [value]="status.value">
+      {{status.title}}
+    </md-option>
+  </md-select>
+  <md-select placeholder="Past Day" name="past"  class="history-view" style="float:right" [(ngModel)]="query.period" (change)="onQueryChanges()">
+    <md-option *ngFor="let status of filterPeriodOptions" [value]="status.value">
+      {{status.title}}
+    </md-option>
+  </md-select>
+</md-toolbar>
+
+<div class="column" (window:resize)="onResize($event)">
+	<div id="svg" [style.width.px]="svgSize.width" [style.height.px]="svgSize.height" (click)='toggleOffAll()'>
+	</div>
+</div>
+<button md-fab class="filter-btn btn-left-margin" mdTooltip="Filter" mdTooltipPosition="right" color="primary" (click)="showFilterDialog=!showFilterDialog">Filter</button>
+<div class="filtersDialog" [hidden]="!showFilterDialog">
+  <md-card>
+    <md-card-content>
+      <md-form-field class="full-width" *ngFor="let g of getQueryFilterKeys()">
+        <input mdInput placeholder="{{ 'Group' + g.substr(1) }}" [(ngModel)]="this.query.filter[g]" />
+      </md-form-field>
+      <button md-icon-button mb-fab color="primary" class="pull-right" (click)="onQueryChanges()"><md-icon class="md-24">done</md-icon></button>
+      <div class="clear"></div>
+    </md-card-content>
+  </md-card>
+</div>
+<button md-fab class="add-btn" mdTooltip="Add article" mdTooltipPosition="left" (click)="addArticle()" color="primary"><md-icon>add</md-icon></button>
+<button md-fab class="ads-btn btn-left-margin" mdTooltip="Adsense" mdTooltipPosition="right" (click)="toggleSocial()" color="primary">Ads</button>
+<div class='social-btn' [hidden]="!showSocialMenu">
+  <a href="#" mdTooltip="Facebook" mdTooltipPosition="right" class="fa fa-facebook"></a>
+  <a href="#" mdTooltip="Twitter" mdTooltipPosition="right" class="fa fa-twitter"></a>
+  <a href="#" mdTooltip="Google" mdTooltipPosition="right" class="fa fa-google"></a>
+  <a href="#" mdTooltip="Linkedin" mdTooltipPosition="right" class="fa fa-linkedin"></a>
+</div>
+
+<section class="selectStateTrigger"  mdTooltip="State Trigger" mdTooltipPosition="left">
+    State
+  <md-slide-toggle
+      class=""
+      [color]="stateTriggerOptions.slideColor"
+      [checked]="stateView"
+      [disabled]="stateTriggerOptions.disabled"
+      (change)="onStateViewChanges($event.checked)">
+  </md-slide-toggle>
+</section>

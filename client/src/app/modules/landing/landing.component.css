@@ -1,0 +1,181 @@
+
+
+
+.column {
+  margin: 10px;
+  flex: 1 1 50%;
+}
+.user {
+  font-size: 40px;
+  padding: 8px;
+  cursor: pointer;
+}
+.title {
+  float: right;
+  padding: 13px;
+  font-size: 15px;
+}
+.search {
+  position: relative;
+  margin: auto;
+  color: black;
+  width: 35%;
+  height: 40px;
+  border-radius: 5px;
+}
+
+/* menu bar color : 241; */
+
+.search-text {
+  position: relative;
+  float: left;
+  color: black;
+  background: rgb(224, 224, 224);
+  width: 100%;
+  outline: none;
+  border: 0;
+  border-radius: 4px;
+  padding: 5px;
+  padding-left: 35px;
+  padding-right: 35px;
+}
+.search-icon {
+  font-size: 33px;
+  position: absolute;
+  z-index: 1;
+  padding:4px;
+  color: rgb(8, 80, 193);
+  cursor: pointer;
+  float: left;
+}
+.clear-search {
+  font-size: 20px;
+  position: absolute;
+  z-index: 1;
+  cursor: pointer;
+  /*padding: 8px;
+  float: right;*/
+  right: 10px !important;
+  color: rgb(8, 80, 193);
+  font-size: 33px;
+  right: 5px;
+  top: 3px;
+}
+md-select {
+  background: transparent;
+  margin-right:10px;
+}
+
+/*md-option {
+  font-size: 10px;
+}*/
+.container {
+  overflow-y: scroll;
+  width: 100%;
+  height: 950px;
+}
+.title-bar {
+  padding: 0px;
+  background: rgb(241, 241, 241) !important;
+  height: 55px;
+  box-shadow: 0 10px 30px -12px rgba(0, 0, 0, 0.42), 0 4px 25px 0px rgba(0, 0, 0, 0.12), 0 8px 10px -5px rgba(0, 0, 0, 0.2);
+}
+
+.mat-slide-toggle-thumb {
+  background: rgb(11, 82, 193);
+}
+.add-btn{
+  position: absolute;
+  bottom: auto;
+  left: auto;
+  right: 23px;
+  top: 136px;
+}
+.ads-btn{
+  position: absolute;
+  top: auto;
+  right: auto;
+  left: 5px;
+  bottom: 20px;
+}
+.filter-btn{
+  position: absolute;
+  bottom: auto;
+  right: auto;
+  left: 5px;
+  top: 136px;
+}
+.selectStateTrigger {
+  position: absolute;
+  height: 27px;
+  right: 16px;
+  left: auto;
+  top: auto;
+  bottom: 20px;
+  margin-right: 8px;
+}
+.md-menu {
+  color: black;
+  padding: 0 21px;
+  cursor: pointer;
+  display: inline-flex;
+}
+.social-btn {
+  position: absolute;
+  left: 0;
+  bottom: 80px;
+  margin-left: 18px;
+}
+.social-btn>a {
+  position: relative;
+  border-radius:50%;
+  padding:10px;
+  color: white;
+  text-align: center;
+  text-decoration: none;
+  margin: 5px 0 2px;
+  font-size:30px;
+  left: 10px;
+  display: block;
+}
+.social-btn>a:hover {
+  opacity: 0.8;
+}
+.fa-facebook {
+  background: #3B5998;
+}
+.fa-twitter {
+  background: #55ACEE;
+}
+.fa-google {
+  background: #dd4b39;
+}
+.fa-linkedin {
+  background: #007bb5;
+}
+.status-view {
+  margin-right: 25px;
+}
+.history-view {
+  margin-right: 15px;
+}
+.mat-select-placeholder {
+  position: absolute !important;
+  color:red !important;
+}
+
+
+
+.filtersDialog {
+  position: absolute;
+  left: -20px;
+  top: 175px;
+  width: 310px;
+}
+
+
+/*Common styles*/
+
+.btn-left-margin {
+  margin-left: 18px;
+}

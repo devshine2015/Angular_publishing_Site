@@ -1,0 +1,12 @@
+.agree-container {
+	float: left;
+}
+
+.disagree-container {
+	float: right;
+}
+
+.desc-text {
+	width: 100%;
+	margin-top: 10px;
+}

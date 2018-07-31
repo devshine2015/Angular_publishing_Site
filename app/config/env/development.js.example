@@ -1,0 +1,16 @@
+module.exports = {
+
+  db: {
+    // connectionString: process.env.SITE_MONGO_URI || "mongodb://hans:hans@ds161471.mlab.com:61471/mean-d3"
+    connectionString: process.env.SITE_MONGO_URI || "mongodb://127.0.0.1:27017/mean-d3"
+  },
+
+  log: {
+    // Can specify one of 'combined', 'common', 'dev', 'short', 'tiny'
+    format: 'dev',
+    options: {}
+  },
+  TextRazorAPI: {
+  	Key: '63f535b024407bee37cf362af62e3ea0ec683307aa7a57fcc9015a32'
+  }
+};

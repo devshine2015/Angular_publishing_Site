@@ -1,0 +1,12 @@
+.pointer {
+  cursor: pointer;
+}
+
+.clear {
+	clear: both;
+}
+
+/* D3 related */
+svg .g {
+
+}

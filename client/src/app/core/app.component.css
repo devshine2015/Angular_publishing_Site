@@ -1,0 +1,37 @@
+/*@import "node_modules/loaders.css/src/loaders";*/
+
+md-toolbar {
+  padding: 0 0 0 5px !important;
+}
+
+.md-elevation-z3 {
+  height: 35px;
+  background: rgba(245, 245, 245, 0.71) !important;
+  padding: 5px 0 0 5px;
+}
+
+.container {
+  width: 100%;
+  padding: 0px;
+  margin: 0px;
+  justify-content: center;
+}
+
+
+.logo-span {
+	float:left;
+	margin-left: 16px;
+	display: inline-flex;
+}
+
+.menu-span {
+	float:right;
+	display: inline-flex;
+	position: absolute;
+	right: 21px;
+}
+
+
+i {
+	font-size: 36px;
+}

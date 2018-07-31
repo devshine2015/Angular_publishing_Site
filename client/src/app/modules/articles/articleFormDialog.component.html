@@ -1,0 +1,81 @@
+
+<!-- <h1 class="title">Add Article</h1> -->
+<div class="content">
+<!-- <form class="article-form"> -->
+	<div class="article-content">
+		<img class="article-image" src="{{node.imageLink}}"/>
+			<p>{{node.title}}</p>
+			<a href={{node.articleLink}}>THIS IS A LINK.</a>
+	</div>
+
+
+	<div class="groups-content">
+	  <md-form-field class="group-chip-list">
+			<md-chip-list mdPrefix #group1>
+			  <md-chip *ngFor="let groupName of groups.g1" [selectable]="selectable" [removable]="removable" (remove)="remove(groupName, 'g1')">
+		      {{groupName}}
+		      <md-icon mdChipRemove>cancel</md-icon>
+		    </md-chip>
+	    </md-chip-list>
+	    <input mdInput placeholder=""
+	       [mdChipInputFor]="group1"
+	       [mdChipInputSeparatorKeyCodes]="separatorKeysCodes"
+	       [mdChipInputAddOnBlur]="addOnBlur"
+	       (mdChipInputTokenEnd)="add($event, 'g1')" />
+		</md-form-field> 
+		
+	  <md-form-field class="group-chip-list">
+	     <md-chip-list mdPrefix #group2>
+			  <md-chip *ngFor="let groupName of groups.g2" [selectable]="selectable" [removable]="removable" (remove)="remove(groupName, 'g2')">
+		      {{groupName}}
+		      <md-icon mdChipRemove>cancel</md-icon>
+		    </md-chip>
+	    </md-chip-list>
+	    <input mdInput placeholder=""
+	       [mdChipInputFor]="group2"
+	       [mdChipInputSeparatorKeyCodes]="separatorKeysCodes"
+	       [mdChipInputAddOnBlur]="addOnBlur"
+	       (mdChipInputTokenEnd)="add($event, 'g2')" />
+		</md-form-field> 
+
+		<md-form-field class="group-chip-list">
+	     <md-chip-list mdPrefix #group3>
+			  <md-chip *ngFor="let groupName of groups.g3" [selectable]="selectable" [removable]="removable" (remove)="remove(groupName, 'g3')">
+		      {{groupName}}
+		      <md-icon mdChipRemove>cancel</md-icon>
+		    </md-chip>
+	    </md-chip-list>
+	    <input mdInput placeholder=""
+	       [mdChipInputFor]="group3"
+	       [mdChipInputSeparatorKeyCodes]="separatorKeysCodes"
+	       [mdChipInputAddOnBlur]="addOnBlur"
+	       (mdChipInputTokenEnd)="add($event, 'g3')" />
+		</md-form-field> 
+
+		<md-form-field class="group-chip-list">
+	    <md-chip-list mdPrefix #group4>
+			  <md-chip *ngFor="let groupName of groups.g4" [selectable]="selectable" [removable]="removable" (remove)="remove(groupName, 'g4')">
+		      {{groupName}}
+		      <md-icon mdChipRemove>cancel</md-icon>
+		    </md-chip>
+	    </md-chip-list>
+	    <input mdInput placeholder=""
+	       [mdChipInputFor]="group4"
+	       [mdChipInputSeparatorKeyCodes]="separatorKeysCodes"
+	       [mdChipInputAddOnBlur]="addOnBlur"
+	       (mdChipInputTokenEnd)="add($event, 'g4')" />
+		</md-form-field> 
+
+		<md-form-field class="comment-box">
+	    <input mdInput maxlength="120" placeholder="Comment" [(ngModel)]="comment" required >
+	    <md-hint align="start"></md-hint>
+	    <md-hint align="end">{{comment.length}} / 120</md-hint>
+	  </md-form-field>
+	</div>
+
+
+
+	<!-- </form> -->
+	<button md-button class="cancel-button" (click)="closeDialog()">Cancel</button>
+	<button md-button class="publish-button" (click)="publish()">Publish</button>
+</div>
